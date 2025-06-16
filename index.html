@@ -1,0 +1,846 @@
+<!DOCTYPE HTML>
+<html onmouseup="mouseUp()" onmousemove="movingAround()">
+
+<body onselectstart='return false;'>
+
+<img src='Assets/Background.png' id="Background" style="z-index: -1;" alt="pohja" class="base" draggable="false">
+
+
+
+
+<div id="zone1Left" onmousedown="zoneStart(1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 401px;"></div>
+<div id="zone1Right" onmousedown="zoneStart(1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 796px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph1Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 401px;">
+<img src='Assets/QuestionMark.png' id="Glyph1Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 796px;">
+
+<div id="zone2Left" onmousedown="zoneStart(2)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 401px;"></div>
+<div id="zone2Right" onmousedown="zoneStart(2)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 796px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph2Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 401px;">
+<img src='Assets/QuestionMark.png' id="Glyph2Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 796px;">
+
+<div id="zone3Left" onmousedown="zoneStart(3)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 401px;"></div>
+<div id="zone3Right" onmousedown="zoneStart(3)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 796px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph3Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 401px;">
+<img src='Assets/QuestionMark.png' id="Glyph3Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 796px;">
+
+<div id="zone4Left" onmousedown="zoneStart(4)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 401px;"></div>
+<div id="zone4Right" onmousedown="zoneStart(4)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 796px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph4Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 401px;">
+<img src='Assets/QuestionMark.png' id="Glyph4Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 796px;">
+
+<div id="zone5Middle" onmousedown="zoneStart(5)" onmouseenter="zoneMove(5)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 85px; left: 601px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph5Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 85px; left: 601px;">
+
+<div id="zone6Middle" onmousedown="zoneStart(6)" onmouseenter="zoneMove(6)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 172px; left: 601px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph6Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 172px; left: 601px;">
+
+<div id="zone7Middle" onmousedown="zoneStart(7)" onmouseenter="zoneMove(7)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 263px; left: 601px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph7Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 263px; left: 601px;">
+
+<div id="zone8Middle" onmousedown="zoneStart(8)" onmouseenter="zoneMove(8)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 357px; left: 601px;"></div>
+<img src='Assets/QuestionMark.png' id="Glyph8Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 357px; left: 601px;">
+
+
+
+<img src='Assets/Blue.png' id="BlueButton" onmousedown="blueStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 129px; left: 177px;">
+<img src='Assets/Blue.png' id="BlueHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+
+<img src='Assets/Purple.png' id="PurpleButton" onmousedown="purpleStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 129px; left: 293px;">
+<img src='Assets/Purple.png' id="PurpleHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+
+<img src='Assets/Yellow.png' id="YellowButton" onmousedown="yellowStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 177px;">
+<img src='Assets/Yellow.png' id="YellowHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+
+<img src='Assets/Red.png' id="RedButton" onmousedown="redStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 293px;">
+<img src='Assets/Red.png' id="RedHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+
+<img src='Assets/White.png' id="WhiteButton" onmousedown="whiteStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 177px;">
+<img src='Assets/White.png' id="WhiteHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+
+<img src='Assets/Green.png' id="GreenButton" onmousedown="greenStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 293px;">
+<img src='Assets/Green.png' id="GreenHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+
+
+
+<img src='Assets/QuestionMark.png' id="Output1" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 369px;">
+<img src='Assets/QuestionMark.png' id="Output2" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 455px;">
+<img src='Assets/QuestionMark.png' id="Output3" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 541px;">
+<img src='Assets/QuestionMark.png' id="Output4" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 627px;">
+
+<h4 id='Output1Text' style="color: gold; position: absolute; top: 558px; left: 366px;"></h5>
+<h4 id='Output2Text' style="color: gold; position: absolute; top: 558px; left: 454px;"></h5>
+<h4 id='Output3Text' style="color: gold; position: absolute; top: 558px; left: 542px;"></h5>
+<h4 id='Output4Text' style="color: gold; position: absolute; top: 558px; left: 628px;"></h5>
+
+<script>
+
+//selected glyph
+// 0 = none
+// 1 = blue
+// 2 = purple
+// 3 = yellow
+// 4 = red
+// 5 = white
+// 6 = green
+var selected = 0;
+
+//zones
+// 0 = background
+// 1 = outer 1
+// 2 = outer 2
+// 3 = outer 3
+// 4 = outer 4
+// 5 = inner 1
+// 6 = inner 2
+// 7 = inner 3
+// 8 = inner 4
+var zone = 0;
+
+//last selected zone
+// 0 = none
+// 1 = outer 1
+// 2 = outer 2
+// 3 = outer 3
+// 4 = outer 4
+// 5 = inner 1
+// 6 = inner 2
+// 7 = inner 3
+// 8 = inner 4
+// 9 = blue
+// 10 = purple
+// 11 = yellow
+// 12 = red
+// 13 = white
+// 14 = green
+var lastZone = 0;
+
+
+var outer1 = 0;
+var outer2 = 0;
+var outer3 = 0;
+var outer4 = 0;
+var inner1 = 0;
+var inner2 = 0;
+var inner3 = 0;
+var inner4 = 0;
+
+
+function zoneMove(temp){
+  zone=temp;
+  //console.log(temp);
+}
+
+
+
+
+
+function movingAround(){
+  if (selected != 0){
+    var xOffset = event.clientX-28+window.pageXOffset+'px';
+    var yOffset = event.clientY-28+window.pageYOffset+'px';
+
+    switch (selected){
+      case 1:
+        BlueHidden.style.left = xOffset;
+        BlueHidden.style.top = yOffset;
+        break;
+      case 2:
+        PurpleHidden.style.left = xOffset;
+        PurpleHidden.style.top = yOffset;
+        break;
+      case 3:
+        YellowHidden.style.left = xOffset;
+        YellowHidden.style.top = yOffset;
+        break;
+      case 4:
+        RedHidden.style.left = xOffset;
+        RedHidden.style.top = yOffset;
+        break;
+      case 5:
+        WhiteHidden.style.left = xOffset;
+        WhiteHidden.style.top = yOffset;
+        break;
+      case 6:
+        GreenHidden.style.left = xOffset;
+        GreenHidden.style.top = yOffset;
+        break;
+    }
+  }
+  
+}
+
+function mouseUp(){
+  if (selected != 0){
+    
+    if (zone != 0){
+      switch (zone){
+        case 1:
+          //console.log('Moving Glyph '+(selected)+' to Zone 1');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph1Left").src = "Assets/Blue.png";
+              document.getElementById("Glyph1Right").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph1Left").src = "Assets/Purple.png";
+              document.getElementById("Glyph1Right").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph1Left").src = "Assets/Yellow.png";
+              document.getElementById("Glyph1Right").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph1Left").src = "Assets/Red.png";
+              document.getElementById("Glyph1Right").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph1Left").src = "Assets/White.png";
+              document.getElementById("Glyph1Right").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph1Left").src = "Assets/Green.png";
+              document.getElementById("Glyph1Right").src = "Assets/Green.png";
+              break;
+
+
+          }
+          break;
+        case 2:
+          //console.log('Moving Glyph '+(selected)+' to Zone 2');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph2Left").src = "Assets/Blue.png";
+              document.getElementById("Glyph2Right").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph2Left").src = "Assets/Purple.png";
+              document.getElementById("Glyph2Right").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph2Left").src = "Assets/Yellow.png";
+              document.getElementById("Glyph2Right").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph2Left").src = "Assets/Red.png";
+              document.getElementById("Glyph2Right").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph2Left").src = "Assets/White.png";
+              document.getElementById("Glyph2Right").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph2Left").src = "Assets/Green.png";
+              document.getElementById("Glyph2Right").src = "Assets/Green.png";
+              break;
+          }
+
+
+          break;
+        case 3:
+          //console.log('Moving Glyph '+(selected)+' to Zone 3');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph3Left").src = "Assets/Blue.png";
+              document.getElementById("Glyph3Right").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph3Left").src = "Assets/Purple.png";
+              document.getElementById("Glyph3Right").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph3Left").src = "Assets/Yellow.png";
+              document.getElementById("Glyph3Right").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph3Left").src = "Assets/Red.png";
+              document.getElementById("Glyph3Right").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph3Left").src = "Assets/White.png";
+              document.getElementById("Glyph3Right").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph3Left").src = "Assets/Green.png";
+              document.getElementById("Glyph3Right").src = "Assets/Green.png";
+              break;
+          }
+
+
+          break;
+        case 4:
+          //console.log('Moving Glyph '+(selected)+' to Zone 4');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph4Left").src = "Assets/Blue.png";
+              document.getElementById("Glyph4Right").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph4Left").src = "Assets/Purple.png";
+              document.getElementById("Glyph4Right").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph4Left").src = "Assets/Yellow.png";
+              document.getElementById("Glyph4Right").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph4Left").src = "Assets/Red.png";
+              document.getElementById("Glyph4Right").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph4Left").src = "Assets/White.png";
+              document.getElementById("Glyph4Right").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph4Left").src = "Assets/Green.png";
+              document.getElementById("Glyph4Right").src = "Assets/Green.png";
+              break;
+          }
+
+
+          break;
+        case 5:
+          //console.log('Moving Glyph '+(selected)+' to Zone 5');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph5Middle").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph5Middle").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph5Middle").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph5Middle").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph5Middle").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph5Middle").src = "Assets/Green.png";
+              break;
+          }
+
+
+          break;
+        case 6:
+          //console.log('Moving Glyph '+(selected)+' to Zone 6');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph6Middle").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph6Middle").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph6Middle").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph6Middle").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph6Middle").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph6Middle").src = "Assets/Green.png";
+              break;
+          }
+
+
+          break;
+        case 7:
+          //console.log('Moving Glyph '+(selected)+' to Zone 7');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph7Middle").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph7Middle").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph7Middle").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph7Middle").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph7Middle").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph7Middle").src = "Assets/Green.png";
+              break;
+          }
+
+
+          break;
+        case 8:
+          //console.log('Moving Glyph '+(selected)+' to Zone 8');
+          switch (selected){
+            case 1:
+              document.getElementById("Glyph8Middle").src = "Assets/Blue.png";
+              break;
+            case 2:
+              document.getElementById("Glyph8Middle").src = "Assets/Purple.png";
+              break;
+            case 3:
+              document.getElementById("Glyph8Middle").src = "Assets/Yellow.png";
+              break;
+            case 4:
+              document.getElementById("Glyph8Middle").src = "Assets/Red.png";
+              break;
+            case 5:
+              document.getElementById("Glyph8Middle").src = "Assets/White.png";
+              break;
+            case 6:
+              document.getElementById("Glyph8Middle").src = "Assets/Green.png";
+              break;
+          }
+
+
+          break;
+      }
+
+      
+
+      
+      
+
+
+
+
+      
+
+    }
+    else{
+      if (8 >= lastZone >= 1){
+        switch (lastZone){
+          case 1:
+            document.getElementById("Glyph1Left").src = "Assets/QuestionMark.png";
+            document.getElementById("Glyph1Right").src = "Assets/QuestionMark.png";
+            break;
+          case 2:
+            document.getElementById("Glyph2Left").src = "Assets/QuestionMark.png";
+            document.getElementById("Glyph2Right").src = "Assets/QuestionMark.png";
+            break;
+          case 3:
+            document.getElementById("Glyph3Left").src = "Assets/QuestionMark.png";
+            document.getElementById("Glyph3Right").src = "Assets/QuestionMark.png";
+            break;
+          case 4:
+            document.getElementById("Glyph4Left").src = "Assets/QuestionMark.png";
+            document.getElementById("Glyph4Right").src = "Assets/QuestionMark.png";
+            break;
+          case 5:
+            document.getElementById("Glyph5Middle").src = "Assets/QuestionMark.png";
+            break;
+          case 6:
+            document.getElementById("Glyph6Middle").src = "Assets/QuestionMark.png";
+            break;
+          case 7:
+            document.getElementById("Glyph7Middle").src = "Assets/QuestionMark.png";
+            break;
+          case 8:
+            document.getElementById("Glyph8Middle").src = "Assets/QuestionMark.png";
+            break;
+        }
+
+      }
+      
+    }
+
+
+
+    //console.log('Calculating');
+    var myImgSrc = document.getElementById("Glyph1Left").src;
+    outer1 = getGlyph(myImgSrc);
+
+    myImgSrc = document.getElementById("Glyph2Left").src;
+    outer2 = getGlyph(myImgSrc);
+
+    myImgSrc = document.getElementById("Glyph3Left").src;
+    outer3 = getGlyph(myImgSrc);
+
+    myImgSrc = document.getElementById("Glyph4Left").src;
+    outer4 = getGlyph(myImgSrc);
+
+
+    myImgSrc = document.getElementById("Glyph5Middle").src;
+    inner1 = getGlyph(myImgSrc);
+
+    myImgSrc = document.getElementById("Glyph6Middle").src;
+    inner2 = getGlyph(myImgSrc);
+
+    myImgSrc = document.getElementById("Glyph7Middle").src;
+    inner3 = getGlyph(myImgSrc);
+
+    myImgSrc = document.getElementById("Glyph8Middle").src;
+    inner4 = getGlyph(myImgSrc);
+
+
+
+
+    //1 = blue
+    //2 = purple
+    //3 = yellow
+    //4 = red
+    //5 = white
+    //6 = green
+    
+    var leftRight = leftOrRight(outer1, inner1);
+    switch (leftRight){
+      case 0:
+        document.getElementById("Output4").src = "Assets/QuestionMark.png";
+        document.getElementById("Output4Text").innerHTML = "";
+        break;
+      case 1:
+        document.getElementById("Output4").src = "Assets/L.png";
+        document.getElementById("Output4Text").innerHTML = ('('+numberOfTurns(outer1, inner1)+' Turns)');
+        break;
+      case 2:
+        document.getElementById("Output4").src = "Assets/R.png";
+        document.getElementById("Output4Text").innerHTML = ('('+numberOfTurns(outer1, inner1)+' Turns)');
+        break;
+      case 3:
+        document.getElementById("Output4").src = "Assets/Equals.png";
+        document.getElementById("Output4Text").innerHTML = '';
+        break;
+    }
+
+    leftRight = leftOrRight(outer2, inner2);
+    switch (leftRight){
+      case 0:
+        document.getElementById("Output3").src = "Assets/QuestionMark.png";
+        document.getElementById("Output3Text").innerHTML = "";
+        break;
+      case 1:
+        document.getElementById("Output3").src = "Assets/L.png";
+        document.getElementById("Output3Text").innerHTML = ('('+numberOfTurns(outer2, inner2)+' Turns)');
+        break;
+      case 2:
+        document.getElementById("Output3").src = "Assets/R.png";
+        document.getElementById("Output3Text").innerHTML = ('('+numberOfTurns(outer2, inner2)+' Turns)');
+        break;
+      case 3:
+        document.getElementById("Output3").src = "Assets/Equals.png";
+        document.getElementById("Output3Text").innerHTML = "";
+        break;
+    }
+
+    leftRight = leftOrRight(outer3, inner3);
+    switch (leftRight){
+      case 0:
+        document.getElementById("Output2").src = "Assets/QuestionMark.png";
+        document.getElementById("Output2Text").innerHTML = "";
+        break;
+      case 1:
+        document.getElementById("Output2").src = "Assets/L.png";
+        document.getElementById("Output2Text").innerHTML = ('('+numberOfTurns(outer3, inner3)+' Turns)');
+        break;
+      case 2:
+        document.getElementById("Output2").src = "Assets/R.png";
+        document.getElementById("Output2Text").innerHTML = ('('+numberOfTurns(outer3, inner3)+' Turns)');
+        break;
+      case 3:
+        document.getElementById("Output2").src = "Assets/Equals.png";
+        document.getElementById("Output2Text").innerHTML = "";
+        break;
+    }
+
+    leftRight = leftOrRight(outer4, inner4);
+    switch (leftRight){
+      case 0:
+        document.getElementById("Output1").src = "Assets/QuestionMark.png";
+        document.getElementById("Output1Text").innerHTML = "";
+        break;
+      case 1:
+        document.getElementById("Output1").src = "Assets/L.png";
+        document.getElementById("Output1Text").innerHTML = ('('+numberOfTurns(outer4, inner4)+' Turns)');
+        break;
+      case 2:
+        document.getElementById("Output1").src = "Assets/R.png";
+        document.getElementById("Output1Text").innerHTML = ('('+numberOfTurns(outer4, inner4)+' Turns)');
+        break;
+      case 3:
+        document.getElementById("Output1").src = "Assets/Equals.png";
+        document.getElementById("Output1Text").innerHTML = "";
+        break;
+    }
+
+
+    //console.log(numberOfTurns(outer1, inner1));
+
+    //console.log(numberOfTurns(outer1, inner1));
+
+
+
+    //console.log('last zone = '+lastZone);
+    //console.log('outer 1 = '+outer1+', outer 2 = '+outer2+', outer 3 = '+outer3+', outer 4 = '+outer4);
+    //console.log('inner 1 = '+inner1+', inner 2 = '+inner2+', inner 3 = '+inner3+', inner 4 = '+inner4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+  selected = 0;
+  BlueHidden.hidden=true;
+  PurpleHidden.hidden=true;
+  YellowHidden.hidden=true;
+  RedHidden.hidden=true;
+  WhiteHidden.hidden=true;
+  GreenHidden.hidden=true;
+}
+
+
+//1 = blue
+//2 = purple
+//3 = yellow
+//4 = red
+//5 = white
+//6 = green
+
+//0 = question
+//1 = left
+//2 = right
+//3 = equal
+
+let glyphOrder = [
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 3, 1, 2, 1, 2, 1],
+    [0, 2, 3, 1, 2, 1, 2],
+    [0, 1, 2, 3, 2, 2, 1],
+    [0, 2, 1, 1, 3, 1, 2],
+    [0, 1, 2, 1, 2, 3, 2],
+    [0, 2, 1, 2, 1, 1, 3]
+];
+
+let glyphRotations = [
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 3, 1, 2, 2, 1],
+    [0, 3, 0, 2, 1, 1, 2],
+    [0, 1, 2, 0, 3, 1, 2],
+    [0, 2, 1, 3, 0, 2, 1],
+    [0, 2, 1, 1, 2, 0, 3],
+    [0, 1, 2, 2, 1, 3, 0]
+];
+
+function leftOrRight(outer, inner){
+  return glyphOrder[outer][inner];
+}
+
+function numberOfTurns(outer, inner){
+  return glyphRotations[outer][inner];
+}
+
+
+
+
+function getGlyph(myImgSrc){
+  myImgSrc = myImgSrc.split("/").pop();
+  switch (myImgSrc){
+    case 'QuestionMark.png':
+      return 0;
+      break;
+    case 'Blue.png':
+      return 1;
+      break;
+    case 'Purple.png':
+      return 2;
+      break;
+    case 'Yellow.png':
+      return 3;
+      break;
+    case 'Red.png':
+      return 4;
+      break;
+    case 'White.png':
+      return 5;
+      break;
+    case 'Green.png':
+      return 6;
+      break;
+    
+    default:
+      return 99;
+      break;
+
+  }
+
+}
+
+
+
+
+function blueStart(event) {
+    lastZone = 9;
+    selected = 1;
+    BlueHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+    BlueHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    BlueHidden.hidden=false;
+}
+function purpleStart(event) {
+    lastZone = 10;
+    selected = 2;
+    PurpleHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+    PurpleHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    PurpleHidden.hidden=false;
+}
+function yellowStart(event) {
+    lastZone = 11;
+    selected = 3;
+    YellowHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+    YellowHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    YellowHidden.hidden=false;
+}
+function redStart(event) {
+    lastZone = 12;
+    selected = 4;
+    RedHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+    RedHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    RedHidden.hidden=false;
+}
+function whiteStart(event) {
+    lastZone = 13;
+    selected = 5;
+    WhiteHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+    WhiteHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    WhiteHidden.hidden=false;
+}
+function greenStart(event) {
+    lastZone = 14;
+    selected = 6;
+    GreenHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+    GreenHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    GreenHidden.hidden=false;
+}
+
+
+
+
+function zoneStart(zoneNumber){
+  switch(zoneNumber){
+    case 1:
+      lastZone = 1;
+      var myImgSrc = document.getElementById("Glyph1Left").src;
+      break;
+    case 2:
+      lastZone = 2;
+      var myImgSrc = document.getElementById("Glyph2Left").src;
+      break;
+    case 3:
+      lastZone = 3;
+      var myImgSrc = document.getElementById("Glyph3Left").src;
+      break;
+    case 4:
+      lastZone = 4;
+      var myImgSrc = document.getElementById("Glyph4Left").src;
+      break;
+    case 5:
+      lastZone = 5;
+      var myImgSrc = document.getElementById("Glyph5Middle").src;
+      break;
+    case 6:
+      lastZone = 6;
+      var myImgSrc = document.getElementById("Glyph6Middle").src;
+      break;
+    case 7:
+      lastZone = 7;
+      var myImgSrc = document.getElementById("Glyph7Middle").src;
+      break;
+    case 8:
+      lastZone = 8;
+      var myImgSrc = document.getElementById("Glyph8Middle").src;
+      break;
+
+  }
+
+
+  
+  myImgSrc = myImgSrc.split("/").pop();
+  switch(myImgSrc){
+    case 'Blue.png':
+      //console.log('Blue');
+      selected = 1;
+      BlueHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      BlueHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      BlueHidden.hidden=false;
+      //blueStart(0);
+      break;
+    case 'Purple.png':
+      //console.log('Purple');
+      selected = 2;
+      PurpleHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      PurpleHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      PurpleHidden.hidden=false;
+      //purpleStart(0);
+      break;
+    case 'Yellow.png':
+      //console.log('Yellow');
+      selected = 3;
+      YellowHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      YellowHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      YellowHidden.hidden=false;
+      //yellowStart(0);
+      break;
+    case 'Red.png':
+      //console.log('Red');
+      selected = 4;
+      RedHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      RedHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      RedHidden.hidden=false;
+      //redStart(0);
+      break;
+    case 'White.png':
+      //console.log('White');
+      selected = 5;
+      WhiteHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      WhiteHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      WhiteHidden.hidden=false;
+      //whiteStart(0);
+      break;
+    case 'Green.png':
+      //console.log('Green');
+      selected = 6;
+      GreenHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      GreenHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      GreenHidden.hidden=false;
+      //greenStart(0);
+      break;
+    default:
+      //console.log('Nothing');
+      break;
+
+
+  }
+  
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
