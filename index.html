@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html onmouseup="mouseUp()" onmousemove="movingAround()">
+<html onmouseup="mouseUp()" onmousemove="movingAround(0)" ontouchmove="movingAround()" ontouchend="mouseUp()">
 
 <body onselectstart='return false;'>
 
@@ -8,56 +8,58 @@
 
 
 
-<div id="zone1Left" onmousedown="zoneStart(1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 401px;"></div>
-<div id="zone1Right" onmousedown="zoneStart(1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 796px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph1Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 401px;">
-<img src='Assets/QuestionMark.png' id="Glyph1Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 796px;">
-
-<div id="zone2Left" onmousedown="zoneStart(2)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 401px;"></div>
-<div id="zone2Right" onmousedown="zoneStart(2)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 796px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph2Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 401px;">
-<img src='Assets/QuestionMark.png' id="Glyph2Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 796px;">
-
-<div id="zone3Left" onmousedown="zoneStart(3)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 401px;"></div>
-<div id="zone3Right" onmousedown="zoneStart(3)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 796px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph3Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 401px;">
-<img src='Assets/QuestionMark.png' id="Glyph3Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 796px;">
-
-<div id="zone4Left" onmousedown="zoneStart(4)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 401px;"></div>
-<div id="zone4Right" onmousedown="zoneStart(4)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 796px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph4Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 401px;">
-<img src='Assets/QuestionMark.png' id="Glyph4Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 796px;">
-
-<div id="zone5Middle" onmousedown="zoneStart(5)" onmouseenter="zoneMove(5)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 85px; left: 601px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph5Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 85px; left: 601px;">
-
-<div id="zone6Middle" onmousedown="zoneStart(6)" onmouseenter="zoneMove(6)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 172px; left: 601px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph6Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 172px; left: 601px;">
-
-<div id="zone7Middle" onmousedown="zoneStart(7)" onmouseenter="zoneMove(7)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 263px; left: 601px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph7Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 263px; left: 601px;">
-
-<div id="zone8Middle" onmousedown="zoneStart(8)" onmouseenter="zoneMove(8)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 357px; left: 601px;"></div>
-<img src='Assets/QuestionMark.png' id="Glyph8Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 357px; left: 601px;">
 
 
+<div class="area" id="zone1Left" ontouchstart="zoneStart(1, 2)" onmousedown="zoneStart(1, 1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 401px;"></div>
+<div class="area" id="zone1Right" ontouchstart="zoneStart(1, 2)" onmousedown="zoneStart(1, 1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 796px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph1Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 401px;">
+<img class="area" src='Assets/QuestionMark.png' id="Glyph1Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 796px;">
 
-<img src='Assets/Blue.png' id="BlueButton" onmousedown="blueStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 129px; left: 177px;">
-<img src='Assets/Blue.png' id="BlueHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+<div class="area" id="zone2Left" ontouchstart="zoneStart(2, 2)" onmousedown="zoneStart(2, 1)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 401px;"></div>
+<div class="area" id="zone2Right" ontouchstart="zoneStart(2, 2)" onmousedown="zoneStart(2, 1)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 796px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph2Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 401px;">
+<img class="area" src='Assets/QuestionMark.png' id="Glyph2Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 796px;">
 
-<img src='Assets/Purple.png' id="PurpleButton" onmousedown="purpleStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 129px; left: 293px;">
+<div class="area" id="zone3Left" ontouchstart="zoneStart(3, 2)" onmousedown="zoneStart(3, 1)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 401px;"></div>
+<div class="area" id="zone3Right" ontouchstart="zoneStart(3, 2)" onmousedown="zoneStart(3, 1)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 796px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph3Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 401px;">
+<img class="area" src='Assets/QuestionMark.png' id="Glyph3Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 796px;">
+
+<div class="area" id="zone4Left" ontouchstart="zoneStart(4, 2)" onmousedown="zoneStart(4, 1)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 401px;"></div>
+<div class="area" id="zone4Right" ontouchstart="zoneStart(4, 2)" onmousedown="zoneStart(4, 1)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 796px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph4Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 401px;">
+<img class="area" src='Assets/QuestionMark.png' id="Glyph4Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 796px;">
+
+<div class="area" id="zone5Middle" ontouchstart="zoneStart(5, 2)" onmousedown="zoneStart(5, 1)" onmouseenter="zoneMove(5)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 85px; left: 601px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph5Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 85px; left: 601px;">
+
+<div class="area" id="zone6Middle" ontouchstart="zoneStart(6, 2)" onmousedown="zoneStart(6, 1)" onmouseenter="zoneMove(6)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 172px; left: 601px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph6Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 172px; left: 601px;">
+
+<div class="area" id="zone7Middle" ontouchstart="zoneStart(7, 2)" onmousedown="zoneStart(7, 1)" onmouseenter="zoneMove(7)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 263px; left: 601px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph7Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 263px; left: 601px;">
+
+<div class="area" id="zone8Middle" ontouchstart="zoneStart(8, 2)" onmousedown="zoneStart(8, 1)" onmouseenter="zoneMove(8)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 357px; left: 601px;"></div>
+<img class="area" src='Assets/QuestionMark.png' id="Glyph8Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 357px; left: 601px;">
+
+
+
+<img src='Assets/Blue.png' id="BlueButton" ontouchstart="blueStart(event, 2)" onmousedown="blueStart(event, 1)"  draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 129px; left: 177px;">
+<img src='Assets/Blue.png' id="BlueHidden" draggable="false" style="touch-action: none; z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+
+<img src='Assets/Purple.png' id="PurpleButton" ontouchstart="purpleStart(event, 2)" onmousedown="purpleStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 129px; left: 293px;">
 <img src='Assets/Purple.png' id="PurpleHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/Yellow.png' id="YellowButton" onmousedown="yellowStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 177px;">
+<img src='Assets/Yellow.png' id="YellowButton" ontouchstart="yellowStart(event, 2)" onmousedown="yellowStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 177px;">
 <img src='Assets/Yellow.png' id="YellowHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/Red.png' id="RedButton" onmousedown="redStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 293px;">
+<img src='Assets/Red.png' id="RedButton" ontouchstart="redStart(event, 2)" onmousedown="redStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 293px;">
 <img src='Assets/Red.png' id="RedHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/White.png' id="WhiteButton" onmousedown="whiteStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 177px;">
+<img src='Assets/White.png' id="WhiteButton" ontouchstart="whiteStart(event, 2)" onmousedown="whiteStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 177px;">
 <img src='Assets/White.png' id="WhiteHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/Green.png' id="GreenButton" onmousedown="greenStart(event)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 293px;">
+<img src='Assets/Green.png' id="GreenButton" ontouchstart="greenStart(event, 2)" onmousedown="greenStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 293px;">
 <img src='Assets/Green.png' id="GreenHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
 
@@ -72,7 +74,160 @@
 <h4 id='Output3Text' style="color: gold; position: absolute; top: 558px; left: 542px;"></h5>
 <h4 id='Output4Text' style="color: gold; position: absolute; top: 558px; left: 628px;"></h5>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
+
+
+
+
+
+let onTouchLeaveEvents = [];
+let onTouchEnterEvents = [];
+const onTouchEnter = function (selector, fn) {
+    onTouchEnterEvents.push([selector, fn]);
+    return function () {
+        onTouchEnterEvents.slice().map(function (e, i) {
+            if (e[0] === selector && e[1] === fn) {
+                onTouchEnterEvents.splice(1, i);
+            }
+        });
+    };
+};
+
+const onTouchLeave = function (selector, fn) {
+    onTouchLeaveEvents.push([selector, fn]);
+    return function () {
+        onTouchLeaveEvents.slice().map(function (e, i) {
+            if (e[0] === selector && e[1] === fn) {
+                onTouchLeaveEvents.splice(1, i);
+            }
+        });
+    };
+};
+
+let lastTouchLeave;
+let lastTouchEnter;
+document.addEventListener('touchmove', function (e) {
+    var el = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+    if (!el) return;
+  
+  onTouchLeaveEvents.map((event) => {
+    if (el!=lastTouchEnter && lastTouchEnter && lastTouchEnter.matches(event[0])) {
+      
+        
+            if (lastTouchEnter !== lastTouchLeave ) {
+                event[1](lastTouchEnter, e);
+        lastTouchLeave = lastTouchEnter;
+        lastTouchEnter = null
+            }
+            
+        }
+    });
+  
+    onTouchEnterEvents.map((event) => {
+        if (el.matches(event[0]) && el!==lastTouchEnter) {
+            lastTouchEnter = el;
+      lastTouchLeave = null;
+      event[1](el, e);
+     }
+    });
+
+});
+
+onTouchEnter('.area',function(el,e){
+  switch (el.id){
+      case 'zone1Left':
+        zone = 1;
+        break;
+      case 'zone1Right':
+        zone = 1;
+        break;
+      case 'zone2Left':
+        zone = 2;
+        break;
+      case 'zone2Right':
+        zone = 2;
+        break;
+      case 'zone3Left':
+        zone = 3;
+        break;
+      case 'zone3Right':
+        zone = 3;
+        break;
+      case 'zone4Left':
+        zone = 4;
+        break;
+      case 'zone4Right':
+        zone = 4;
+        break;
+      
+      case 'zone5Middle':
+        zone = 5;
+        break;
+      case 'zone6Middle':
+        zone = 6;
+        break;
+      case 'zone7Middle':
+        zone = 7;
+        break;
+      case 'zone8Middle':
+        zone = 8;
+        break;
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+
+
+
+
+
+
+})
+onTouchLeave('.area',function(el,e){
+  zone = 0;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //selected glyph
 // 0 = none
@@ -134,10 +289,20 @@ function zoneMove(temp){
 
 
 
-function movingAround(){
+function movingAround(mouseTouch){
   if (selected != 0){
-    var xOffset = event.clientX-28+window.pageXOffset+'px';
-    var yOffset = event.clientY-28+window.pageYOffset+'px';
+    if (mouseTouch == 0){
+      //console.log('mouse event');
+      var xOffset = event.clientX-28+window.pageXOffset+'px';
+      var yOffset = event.clientY-28+window.pageYOffset+'px';
+    }
+    else{
+      var touch = event.touches[0];
+      //console.log('touch event');
+      var xOffset = touch.pageX-28+'px';
+      var yOffset = touch.pageY-28+'px';
+    }
+    
 
     switch (selected){
       case 1:
@@ -170,6 +335,7 @@ function movingAround(){
 }
 
 function mouseUp(){
+  console.log('mouse up');
   if (selected != 0){
     
     if (zone != 0){
@@ -601,6 +767,8 @@ function mouseUp(){
   RedHidden.hidden=true;
   WhiteHidden.hidden=true;
   GreenHidden.hidden=true;
+
+
 }
 
 
@@ -619,10 +787,10 @@ function mouseUp(){
 let glyphOrder = [
     [0, 0, 0, 0, 0, 0, 0],
     [0, 3, 1, 2, 1, 2, 1],
-    [0, 2, 3, 1, 2, 1, 2],
-    [0, 1, 2, 3, 2, 2, 1],
+    [0, 1, 3, 1, 2, 1, 2],
+    [0, 1, 2, 3, 1, 2, 1],
     [0, 2, 1, 1, 3, 1, 2],
-    [0, 1, 2, 1, 2, 3, 2],
+    [0, 1, 2, 1, 2, 3, 1],
     [0, 2, 1, 2, 1, 1, 3]
 ];
 
@@ -638,6 +806,7 @@ let glyphRotations = [
 
 function leftOrRight(outer, inner){
   return glyphOrder[outer][inner];
+  
 }
 
 function numberOfTurns(outer, inner){
@@ -683,53 +852,102 @@ function getGlyph(myImgSrc){
 
 
 
-function blueStart(event) {
+
+function blueStart(event, touched) {
     lastZone = 9;
     selected = 1;
-    BlueHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-    BlueHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    if (touched == 1){
+      BlueHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      BlueHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    }
+    else if (touched == 2){
+      var touch = event.touches[0];
+      BlueHidden.style.left = touch.pageX-28+'px';
+      BlueHidden.style.top = touch.pageY-28+'px';
+    }
     BlueHidden.hidden=false;
 }
-function purpleStart(event) {
+function purpleStart(event, touched) {
     lastZone = 10;
     selected = 2;
-    PurpleHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-    PurpleHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    if (touched == 1){
+      PurpleHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      PurpleHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    }
+    else if (touched == 2){
+      var touch = event.touches[0];
+      PurpleHidden.style.left = touch.pageX-28+'px';
+      PurpleHidden.style.top = touch.pageY-28+'px';
+    }
     PurpleHidden.hidden=false;
 }
-function yellowStart(event) {
+function yellowStart(event, touched) {
     lastZone = 11;
     selected = 3;
-    YellowHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-    YellowHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    if (touched == 1){
+      YellowHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      YellowHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    }
+    else if (touched == 2){
+      var touch = event.touches[0];
+      YellowHidden.style.left = touch.pageX-28+'px';
+      YellowHidden.style.top = touch.pageY-28+'px';
+    }
     YellowHidden.hidden=false;
 }
-function redStart(event) {
+function redStart(event, touched) {
     lastZone = 12;
     selected = 4;
-    RedHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-    RedHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    if (touched == 1){
+      RedHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      RedHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    }
+    else if (touched == 2){
+      var touch = event.touches[0];
+      RedHidden.style.left = touch.pageX-28+'px';
+      RedHidden.style.top = touch.pageY-28+'px';
+    }
     RedHidden.hidden=false;
 }
-function whiteStart(event) {
+function whiteStart(event, touched) {
     lastZone = 13;
     selected = 5;
-    WhiteHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-    WhiteHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    if (touched == 1){
+      WhiteHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      WhiteHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    }
+    else if (touched == 2){
+      var touch = event.touches[0];
+      WhiteHidden.style.left = touch.pageX-28+'px';
+      WhiteHidden.style.top = touch.pageY-28+'px';
+    }
     WhiteHidden.hidden=false;
 }
-function greenStart(event) {
+function greenStart(event, touched) {
     lastZone = 14;
     selected = 6;
-    GreenHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-    GreenHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    if (touched == 1){
+      GreenHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+      GreenHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+    }
+    else if (touched == 2){
+      var touch = event.touches[0];
+      GreenHidden.style.left = touch.pageX-28+'px';
+      GreenHidden.style.top = touch.pageY-28+'px';
+    }
     GreenHidden.hidden=false;
 }
 
 
 
 
-function zoneStart(zoneNumber){
+
+
+
+
+function zoneStart(zoneNumber, touched){
+  console.log('Zone Start');
+  console.log(touched);
   switch(zoneNumber){
     case 1:
       lastZone = 1;
@@ -773,48 +991,90 @@ function zoneStart(zoneNumber){
     case 'Blue.png':
       //console.log('Blue');
       selected = 1;
-      BlueHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-      BlueHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      if (touched == 1){
+        BlueHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+        BlueHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      }
+      else if (touched == 2){
+        var touch = event.touches[0];
+        BlueHidden.style.left = touch.pageX-28+'px';
+        BlueHidden.style.top = touch.pageY-28+'px';
+      }
       BlueHidden.hidden=false;
       //blueStart(0);
       break;
     case 'Purple.png':
       //console.log('Purple');
       selected = 2;
-      PurpleHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-      PurpleHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      if (touched == 1){
+        PurpleHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+        PurpleHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      }
+      else if (touched == 2){
+        var touch = event.touches[0];
+        PurpleHidden.style.left = touch.pageX-28+'px';
+        PurpleHidden.style.top = touch.pageY-28+'px';
+      }
       PurpleHidden.hidden=false;
       //purpleStart(0);
       break;
     case 'Yellow.png':
       //console.log('Yellow');
       selected = 3;
-      YellowHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-      YellowHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      if (touched == 1){
+        YellowHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+        YellowHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      }
+      else if (touched == 2){
+        var touch = event.touches[0];
+        YellowHidden.style.left = touch.pageX-28+'px';
+        YellowHidden.style.top = touch.pageY-28+'px';
+      }
       YellowHidden.hidden=false;
       //yellowStart(0);
       break;
     case 'Red.png':
       //console.log('Red');
       selected = 4;
-      RedHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-      RedHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      if (touched == 1){
+        RedHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+        RedHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      }
+      else if (touched == 2){
+        var touch = event.touches[0];
+        RedHidden.style.left = touch.pageX-28+'px';
+        RedHidden.style.top = touch.pageY-28+'px';
+      }
       RedHidden.hidden=false;
       //redStart(0);
       break;
     case 'White.png':
       //console.log('White');
       selected = 5;
-      WhiteHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-      WhiteHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      if (touched == 1){
+        WhiteHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+        WhiteHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      }
+      else if (touched == 2){
+        var touch = event.touches[0];
+        WhiteHidden.style.left = touch.pageX-28+'px';
+        WhiteHidden.style.top = touch.pageY-28+'px';
+      }
       WhiteHidden.hidden=false;
       //whiteStart(0);
       break;
     case 'Green.png':
       //console.log('Green');
       selected = 6;
-      GreenHidden.style.left = event.clientX-28+window.pageXOffset+'px';
-      GreenHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      if (touched == 1){
+        GreenHidden.style.left = event.clientX-28+window.pageXOffset+'px';
+        GreenHidden.style.top = event.clientY-28+window.pageYOffset+'px';
+      }
+      else if (touched == 2){
+        var touch = event.touches[0];
+        GreenHidden.style.left = touch.pageX-28+'px';
+        GreenHidden.style.top = touch.pageY-28+'px';
+      }
       GreenHidden.hidden=false;
       //greenStart(0);
       break;
@@ -835,6 +1095,15 @@ function zoneStart(zoneNumber){
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 
