@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html onmouseup="mouseUp()" onmousemove="movingAround(0)" ontouchmove="movingAround()" ontouchend="mouseUp()">
+<html id = "BackgroundID" onmouseup="mouseUp()" onmousemove="movingAround(0)" ontouchmove="movingAround()" ontouchend="mouseUp()">
+  
 
 <body onselectstart='return false;'>
 
@@ -7,39 +8,36 @@
 
 
 
-
-
-
-<div class="area" id="zone1Left" ontouchstart="zoneStart(1, 2)" onmousedown="zoneStart(1, 1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 401px;"></div>
-<div class="area" id="zone1Right" ontouchstart="zoneStart(1, 2)" onmousedown="zoneStart(1, 1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 796px;"></div>
+<div class="area" id="zone1Left" ontouchstart="zoneStart(1, 2)" onmousedown="zoneStart(1, 1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 401px;"></div>
+<div class="area" id="zone1Right" ontouchstart="zoneStart(1, 2)" onmousedown="zoneStart(1, 1)" onmouseenter="zoneMove(1)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 114px; left: 796px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph1Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 401px;">
 <img class="area" src='Assets/QuestionMark.png' id="Glyph1Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 114px; left: 796px;">
 
-<div class="area" id="zone2Left" ontouchstart="zoneStart(2, 2)" onmousedown="zoneStart(2, 1)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 401px;"></div>
-<div class="area" id="zone2Right" ontouchstart="zoneStart(2, 2)" onmousedown="zoneStart(2, 1)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 796px;"></div>
+<div class="area" id="zone2Left" ontouchstart="zoneStart(2, 2)" onmousedown="zoneStart(2, 1)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 401px;"></div>
+<div class="area" id="zone2Right" ontouchstart="zoneStart(2, 2)" onmousedown="zoneStart(2, 1)" onmouseenter="zoneMove(2)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 198px; left: 796px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph2Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 401px;">
 <img class="area" src='Assets/QuestionMark.png' id="Glyph2Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 198px; left: 796px;">
 
-<div class="area" id="zone3Left" ontouchstart="zoneStart(3, 2)" onmousedown="zoneStart(3, 1)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 401px;"></div>
-<div class="area" id="zone3Right" ontouchstart="zoneStart(3, 2)" onmousedown="zoneStart(3, 1)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 796px;"></div>
+<div class="area" id="zone3Left" ontouchstart="zoneStart(3, 2)" onmousedown="zoneStart(3, 1)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 401px;"></div>
+<div class="area" id="zone3Right" ontouchstart="zoneStart(3, 2)" onmousedown="zoneStart(3, 1)" onmouseenter="zoneMove(3)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 282px; left: 796px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph3Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 401px;">
 <img class="area" src='Assets/QuestionMark.png' id="Glyph3Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 282px; left: 796px;">
 
-<div class="area" id="zone4Left" ontouchstart="zoneStart(4, 2)" onmousedown="zoneStart(4, 1)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 401px;"></div>
-<div class="area" id="zone4Right" ontouchstart="zoneStart(4, 2)" onmousedown="zoneStart(4, 1)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 796px;"></div>
+<div class="area" id="zone4Left" ontouchstart="zoneStart(4, 2)" onmousedown="zoneStart(4, 1)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 401px;"></div>
+<div class="area" id="zone4Right" ontouchstart="zoneStart(4, 2)" onmousedown="zoneStart(4, 1)" onmouseenter="zoneMove(4)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 366px; left: 796px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph4Left" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 401px;">
 <img class="area" src='Assets/QuestionMark.png' id="Glyph4Right" draggable="false" style="height:56px; width:56px; position: absolute; top: 366px; left: 796px;">
 
-<div class="area" id="zone5Middle" ontouchstart="zoneStart(5, 2)" onmousedown="zoneStart(5, 1)" onmouseenter="zoneMove(5)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 85px; left: 601px;"></div>
+<div class="area" id="zone5Middle" ontouchstart="zoneStart(5, 2)" onmousedown="zoneStart(5, 1)" onmouseenter="zoneMove(5)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 85px; left: 601px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph5Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 85px; left: 601px;">
 
-<div class="area" id="zone6Middle" ontouchstart="zoneStart(6, 2)" onmousedown="zoneStart(6, 1)" onmouseenter="zoneMove(6)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 172px; left: 601px;"></div>
+<div class="area" id="zone6Middle" ontouchstart="zoneStart(6, 2)" onmousedown="zoneStart(6, 1)" onmouseenter="zoneMove(6)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 172px; left: 601px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph6Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 172px; left: 601px;">
 
-<div class="area" id="zone7Middle" ontouchstart="zoneStart(7, 2)" onmousedown="zoneStart(7, 1)" onmouseenter="zoneMove(7)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 263px; left: 601px;"></div>
+<div class="area" id="zone7Middle" ontouchstart="zoneStart(7, 2)" onmousedown="zoneStart(7, 1)" onmouseenter="zoneMove(7)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 263px; left: 601px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph7Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 263px; left: 601px;">
 
-<div class="area" id="zone8Middle" ontouchstart="zoneStart(8, 2)" onmousedown="zoneStart(8, 1)" onmouseenter="zoneMove(8)" onmouseleave="zoneMove(0)" draggable="false" style="z-index: 1; height:56px; width:56px; position: absolute; top: 357px; left: 601px;"></div>
+<div class="area" id="zone8Middle" ontouchstart="zoneStart(8, 2)" onmousedown="zoneStart(8, 1)" onmouseenter="zoneMove(8)" onmouseleave="zoneMove(0)" draggable="false" style="touch-action: none; z-index: 1; height:56px; width:56px; position: absolute; top: 357px; left: 601px;"></div>
 <img class="area" src='Assets/QuestionMark.png' id="Glyph8Middle" draggable="false" style="height:56px; width:56px; position: absolute; top: 357px; left: 601px;">
 
 
@@ -47,27 +45,27 @@
 <img src='Assets/Blue.png' id="BlueButton" ontouchstart="blueStart(event, 2)" onmousedown="blueStart(event, 1)"  draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 129px; left: 177px;">
 <img src='Assets/Blue.png' id="BlueHidden" draggable="false" style="touch-action: none; z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/Purple.png' id="PurpleButton" ontouchstart="purpleStart(event, 2)" onmousedown="purpleStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 129px; left: 293px;">
-<img src='Assets/Purple.png' id="PurpleHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+<img src='Assets/Purple.png' id="PurpleButton" ontouchstart="purpleStart(event, 2)" onmousedown="purpleStart(event, 1)" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 129px; left: 293px;">
+<img src='Assets/Purple.png' id="PurpleHidden" draggable="false" style="touch-action: none; z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/Yellow.png' id="YellowButton" ontouchstart="yellowStart(event, 2)" onmousedown="yellowStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 177px;">
-<img src='Assets/Yellow.png' id="YellowHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+<img src='Assets/Yellow.png' id="YellowButton" ontouchstart="yellowStart(event, 2)" onmousedown="yellowStart(event, 1)" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 241px; left: 177px;">
+<img src='Assets/Yellow.png' id="YellowHidden" draggable="false" style="touch-action: none; z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/Red.png' id="RedButton" ontouchstart="redStart(event, 2)" onmousedown="redStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 241px; left: 293px;">
-<img src='Assets/Red.png' id="RedHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+<img src='Assets/Red.png' id="RedButton" ontouchstart="redStart(event, 2)" onmousedown="redStart(event, 1)" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 241px; left: 293px;">
+<img src='Assets/Red.png' id="RedHidden" draggable="false" style="touch-action: none; z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/White.png' id="WhiteButton" ontouchstart="whiteStart(event, 2)" onmousedown="whiteStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 177px;">
-<img src='Assets/White.png' id="WhiteHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+<img src='Assets/White.png' id="WhiteButton" ontouchstart="whiteStart(event, 2)" onmousedown="whiteStart(event, 1)" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 353px; left: 177px;">
+<img src='Assets/White.png' id="WhiteHidden" draggable="false" style="touch-action: none; z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
-<img src='Assets/Green.png' id="GreenButton" ontouchstart="greenStart(event, 2)" onmousedown="greenStart(event, 1)" draggable="false" style="height:56px; width:56px; position: absolute; top: 353px; left: 293px;">
-<img src='Assets/Green.png' id="GreenHidden" draggable="false" style="z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
+<img src='Assets/Green.png' id="GreenButton" ontouchstart="greenStart(event, 2)" onmousedown="greenStart(event, 1)" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 353px; left: 293px;">
+<img src='Assets/Green.png' id="GreenHidden" draggable="false" style="touch-action: none; z-index: 2; pointer-events: none; height:56px; width:56px; position: absolute; top: 0px; left: 0px;" hidden="true">
 
 
 
-<img src='Assets/QuestionMark.png' id="Output1" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 369px;">
-<img src='Assets/QuestionMark.png' id="Output2" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 455px;">
-<img src='Assets/QuestionMark.png' id="Output3" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 541px;">
-<img src='Assets/QuestionMark.png' id="Output4" draggable="false" style="height:56px; width:56px; position: absolute; top: 504px; left: 627px;">
+<img src='Assets/QuestionMark.png' id="Output1" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 504px; left: 369px;">
+<img src='Assets/QuestionMark.png' id="Output2" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 504px; left: 455px;">
+<img src='Assets/QuestionMark.png' id="Output3" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 504px; left: 541px;">
+<img src='Assets/QuestionMark.png' id="Output4" draggable="false" style="touch-action: none; height:56px; width:56px; position: absolute; top: 504px; left: 627px;">
 
 <h4 id='Output1Text' style="color: gold; position: absolute; top: 558px; left: 366px;"></h5>
 <h4 id='Output2Text' style="color: gold; position: absolute; top: 558px; left: 454px;"></h5>
@@ -335,7 +333,8 @@ function movingAround(mouseTouch){
 }
 
 function mouseUp(){
-  console.log('mouse up');
+  //document.getElementById("BackgroundID").style="touch-action: auto";
+  //console.log('mouse up');
   if (selected != 0){
     
     if (zone != 0){
@@ -854,6 +853,7 @@ function getGlyph(myImgSrc){
 
 
 function blueStart(event, touched) {
+  
     lastZone = 9;
     selected = 1;
     if (touched == 1){
@@ -868,6 +868,7 @@ function blueStart(event, touched) {
     BlueHidden.hidden=false;
 }
 function purpleStart(event, touched) {
+  
     lastZone = 10;
     selected = 2;
     if (touched == 1){
@@ -882,6 +883,7 @@ function purpleStart(event, touched) {
     PurpleHidden.hidden=false;
 }
 function yellowStart(event, touched) {
+  
     lastZone = 11;
     selected = 3;
     if (touched == 1){
@@ -896,6 +898,7 @@ function yellowStart(event, touched) {
     YellowHidden.hidden=false;
 }
 function redStart(event, touched) {
+  
     lastZone = 12;
     selected = 4;
     if (touched == 1){
@@ -910,6 +913,7 @@ function redStart(event, touched) {
     RedHidden.hidden=false;
 }
 function whiteStart(event, touched) {
+  
     lastZone = 13;
     selected = 5;
     if (touched == 1){
@@ -924,6 +928,7 @@ function whiteStart(event, touched) {
     WhiteHidden.hidden=false;
 }
 function greenStart(event, touched) {
+  
     lastZone = 14;
     selected = 6;
     if (touched == 1){
@@ -946,8 +951,7 @@ function greenStart(event, touched) {
 
 
 function zoneStart(zoneNumber, touched){
-  console.log('Zone Start');
-  console.log(touched);
+  //console.log('Zone Start');
   switch(zoneNumber){
     case 1:
       lastZone = 1;
@@ -1095,15 +1099,6 @@ function zoneStart(zoneNumber, touched){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
